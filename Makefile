@@ -43,7 +43,7 @@ out_dir := out
 
 # Change these only to really change the behavior of the whole setup
 
-PANDOC := pandoc $(if $(xelatex),--latex-engine xelatex) \
+PANDOC := pandoc $(if $(xelatex),--pdf-engine xelatex) \
     --template $(PANDOC_TMPL) $(PANDOC_OPTIONS)
 
 LATEXMK := latexmk $(if $(xelatex),-xelatex,-pdflatex="pdflatex %O %S") \
