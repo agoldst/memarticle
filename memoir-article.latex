@@ -167,9 +167,12 @@ $else$
 $endif$
 $endif$
 
-% tables
+% tables: 2021 pandoc tables need array and calc
 $if(tables)$
-\usepackage{longtable,booktabs}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{calc}
 $endif$
 
 % graphics
