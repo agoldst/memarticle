@@ -529,6 +529,9 @@ $endif$
 $endif$
 
 \date{$date$}
+
+$preamble$
+
 \begin{document}
 $if(has-frontmatter)$
 \frontmatter
