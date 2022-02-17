@@ -8,17 +8,19 @@ $if(CJKmainfont)$
 \PassOptionsToPackage{space}{xeCJK}
 $endif$
 %
-\documentclass[
+\documentclass[article,%
 $if(fontsize)$
-  $fontsize$,
+  $fontsize$,%
 $else$
-  12pt,
+  12pt,%
 $endif$
 $if(papersize)$
   $papersize$paper,
+$else$
+  letterpaper,%
 $endif$
 $for(classoption)$
-  $classoption$$sep$,
+  $classoption$$sep$,%
 $endfor$
 ]{memoir}
 
@@ -46,8 +48,7 @@ $if(mathspec)$
 $else$
   \usepackage{unicode-math}
 $endif$
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}
 $if(mainfont)$
   \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
 $endif$
